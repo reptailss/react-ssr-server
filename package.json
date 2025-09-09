@@ -1,0 +1,28 @@
+{
+	"name": "os-react-ssr-server",
+	"version": "0.0.1",
+	"description": "OneSoft react ssr",
+	"main": "dist/index.js",
+	"types": "dist/types/index.d.ts",
+	"scripts": {
+		"build": "tspc --build tsconfig.build.json"
+	},
+	"files": [
+		"dist"
+	],
+	"peerDependencies": {
+		"os-core-ts": "git+https://github.com/reptailss/os-core-ts.git#master"
+	},
+	"type": "commonjs",
+	"author": "One soft",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "22.7.6",
+		"nodemon": "2.0.20",
+		"ts-node": "10.9.2",
+		"ts-patch": "^3.3.0",
+		"tsconfig-paths": "^4.2.0",
+		"typescript": "5.4.2",
+		"typescript-transform-paths": "^3.5.5"
+	}
+}

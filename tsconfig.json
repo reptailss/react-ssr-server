@@ -1,0 +1,53 @@
+{
+	"compilerOptions": {
+		"target": "ES2017",
+		"module": "commonjs",
+		"rootDir": ".",
+		"sourceMap": true,
+		"outDir": "dist",
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"declaration": true,
+		"emitDeclarationOnly": false,
+		"resolveJsonModule": true,
+		"declarationDir": "dist/types",
+		"preserveConstEnums": true,
+		"allowJs": true,
+		"checkJs": false,
+		"types": [
+			"node"
+		],
+		"paths": {
+
+		},
+		"plugins": [
+			{
+				"transform": "typescript-transform-paths"
+			},
+			{
+				"transform": "typescript-transform-paths",
+				"afterDeclarations": true
+			}
+		]
+	},
+	"ts-node": {
+		"require": [
+			"tsconfig-paths/register"
+		]
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+		"example",
+		"packages",
+		"static",
+		"cli.js",
+	]
+}
