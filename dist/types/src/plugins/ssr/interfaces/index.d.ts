@@ -3,9 +3,9 @@ import { ISsrNotFoundController } from './ssrNotFoundController';
 import { ISsrGlobalDataController } from './ssrGlobalDataController';
 export interface IReactSsrAppPlugin extends IAppPlugin {
     useNotFoundController(controller: {
-        new (): ISsrNotFoundController;
+        new (...args: any): ISsrNotFoundController;
     }): this;
     useGlobalDataController(controller: {
-        new (): ISsrGlobalDataController;
+        new (...args: any): ISsrGlobalDataController;
     }): this;
 }

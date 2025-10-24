@@ -7,10 +7,10 @@ export declare class ReactSsrAppPlugin implements IReactSsrAppPlugin {
     private notFoundHandler;
     register(app: IApp): void | Promise<void>;
     useNotFoundController(controller: {
-        new (): ISsrNotFoundController;
+        new (...args: any): ISsrNotFoundController;
     }): this;
     useGlobalDataController(controller: {
-        new (): ISsrGlobalDataController;
+        new (...args: any): ISsrGlobalDataController;
     }): this;
     private getSSRControllerHandler;
     private handleAppData;

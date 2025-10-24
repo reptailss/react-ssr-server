@@ -50,7 +50,7 @@ export class ReactSsrAppPlugin implements IReactSsrAppPlugin {
         
     }
     
-    public useNotFoundController(controller: {new(): ISsrNotFoundController}): this {
+    public useNotFoundController(controller: {new(...args: any): ISsrNotFoundController}): this {
         const controllerInstance = new controller() as unknown as Controller
         this.notFoundHandler = this.getSSRControllerHandler(
             {
@@ -64,7 +64,7 @@ export class ReactSsrAppPlugin implements IReactSsrAppPlugin {
         return this
     }
     
-    public useGlobalDataController(controller: {new(): ISsrGlobalDataController}): this {
+    public useGlobalDataController(controller: {new(...args: any): ISsrGlobalDataController}): this {
         this.ssrGlobalDataController = new controller() as unknown as Controller
         return this
     }
