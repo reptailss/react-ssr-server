@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReactSsrDec = void 0;
+exports.ReactSsr = void 0;
 const os_core_ts_1 = require("os-core-ts");
-function ReactSsrDec(path) {
+function ReactSsr(path) {
     return function (target, propertyKey, descriptor) {
         os_core_ts_1.RegisterApiMethodsDecorators.registerMethodDecorator({
             path,
@@ -13,5 +13,5 @@ function ReactSsrDec(path) {
         });
     };
 }
-exports.ReactSsrDec = ReactSsrDec;
+exports.ReactSsr = ReactSsr;
 //# sourceMappingURL=apiMethods.js.map

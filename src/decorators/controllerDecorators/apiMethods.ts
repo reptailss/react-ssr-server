@@ -1,6 +1,6 @@
 import {RegisterApiMethodsDecorators} from 'os-core-ts'
 
-export function ReactSsrDec(path: string) {
+export function ReactSsr(path: string) {
     return function(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
         RegisterApiMethodsDecorators.registerMethodDecorator({
             path,
